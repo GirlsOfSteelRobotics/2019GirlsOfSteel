@@ -57,6 +57,7 @@ public class OI {
 	private JoystickButton pivotGround;
 	private JoystickButton pivotRocket;
 	private JoystickButton pivotShip;
+	private JoystickButton pivotHatch;
 
 	public OI() {
 		drivingPad = new Joystick(0);
@@ -120,6 +121,8 @@ public class OI {
 		// Pivot buttons
 		// negative is down, positive is up
 		// must start up
+	
+		
 		pivotUp = new JoystickButton(operatingPad, 2);
 		pivotUp.whileHeld(new PivotUp());
 		
@@ -134,6 +137,9 @@ public class OI {
 
 		pivotShip = new JoystickButton (operatingPad, 10);
 		pivotShip.whenPressed(new PivotToShip());
+
+		pivotHatch = new JoystickButton(operatingPad, 9);
+		pivotHatch.whenPressed(new PivotToHatch());
 
 	}
 	public double getLeftUpAndDown() {

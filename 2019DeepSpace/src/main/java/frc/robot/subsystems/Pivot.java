@@ -29,7 +29,9 @@ public class Pivot extends Subsystem {
 	public static final double PIVOT_GROUND = -4143; //tested
 	public static final double PIVOT_ROCKET = -1852; //tested 
 	public static final double PIVOT_CARGO = -1091; //tested
+	public static final double PIVOT_HATCH = -4100; //tested
 	public static final double PIVOT_TOLERANCE = 100;
+
   
   public Pivot() {
 		pivot = new WPI_TalonSRX(RobotMap.PIVOT_TALON);
